@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <h1 class="logo">Library App.</h1>
+      <button class="add" id="add-book" onclick="openForm()">Add a Book</button>
+    </div>
+
+    <!-- The form -->
+    <div class="form-popup" id="myForm">
+      <form action="index.html" class="form-container">
+        <h1 class="form-title">Book Name</h1>
+
+        <label for="book-name"><b>Author</b></label>
+        <input
+          type="text"
+          placeholder="Book Name"
+          name="book-name"
+          id="name-value"
+          value="book-name"
+          required
+        />
+
+        <label for="book-author"><b>Book Author</b></label>
+        <input
+          type="text"
+          placeholder="Author"
+          name="book-author"
+          id="author-value"
+          required
+        />
+
+        <label for="book-pages"><b>Book pages</b></label>
+        <input
+          type="number"
+          placeholder="Book pages"
+          name="book-pages"
+          id="pages-value"
+          required
+        />
+
+        <button type="submit" id="submit" class="btn">
+          Add Book To Library
+        </button>
+
+        <button type="button" class="btn cancel" onclick="closeForm()">
+          Close
+        </button>
+      </form>
+    </div>
+    <div class="container" id="container">
+      <h1 id="book-name"></h1>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
